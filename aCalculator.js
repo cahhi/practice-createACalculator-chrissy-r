@@ -12,7 +12,6 @@ function calculatorGame() {
     if (userChoice === "1") {
       let userAnswer = readline.question("Please enter a number: ");
       let userNumChoice = Number(userAnswer);
-
         function absoluteValue(userNum) {
             console.log("The absolute value of the number is:", Math.abs(userNum));
     
@@ -31,49 +30,40 @@ function calculatorGame() {
 powerNumber(userNum1,userNum2);
 
 //Square Root Finder
-}else if (userChoice === "3") {
-    let userAnswer = readline.question("Please enter a number: ");
-    let userNumChoice = Number(userAnswer);
-
-        function squareRootNum(userNumber) {
-            console.log(`The square root of ${userNumChoice} is:`, Math.sqrt(userNumber));
-}
+    }else if (userChoice === "3") {
+        let userAnswer = readline.question("Please enter a number: ");
+        let userNumChoice = Number(userAnswer);
+            function squareRootNum(userNumber) {
+                console.log(`The square root of ${userNumChoice} is:`, Math.sqrt(userNumber));
+    }
 squareRootNum(userNumChoice);
 
 //Max and Min Finder of set of numbers inputed by the user
-}else if (userChoice === "4") {
-    let userAnswer = readline.question("Please enter multiple numbers seperated by commas in which you would like to see the min/max of: ");
-    let userNums = userAnswer.split(',').map(Number); // this took me a bit of time to figure out. I ended up splitting the numbers by the comma and turning each user number from a string to a number and placing it in an array for JavaScript to read from
-  
-function maxMinFinder(){
-
-    //console.log(`The smallest number is ${Math.min(...userInput)} and the largest number is ${Math.max(...userInput)}`);
-    console.log(`The minimum number of is:`, Math.min(...userNums));
-    console.log(`The maximum number is:`, Math.max(...userNums));
-}
+    }else if (userChoice === "4") {
+        let userAnswer = readline.question("Please enter multiple numbers seperated by commas in which you would like to see the min/max of: ");
+        let userNums = userAnswer.split(',').map(Number); // this took me a bit of time to figure out. I ended up splitting the numbers by the comma and turning each user number from a string to a number and placing it in an array for JavaScript to read from
+            function maxMinFinder(){
+            //console.log(`The smallest number is ${Math.min(...userInput)} and the largest number is ${Math.max(...userInput)}`);
+                console.log(`The minimum number of is:`, Math.min(...userNums));
+                console.log(`The maximum number is:`, Math.max(...userNums));
+    }
 maxMinFinder(userNums);
-
-
 //Random Number Generator
-}else if (userChoice === "5") {
-    let userAnswer = readline.question("Please enter a number: ");
-    let userNumChoice = Number(userAnswer);
-function randomNumber(){
-    let num = Math.round(Math.random() * userNumChoice);
-    console.log("Your random number is:", num);
-}
-
+    }else if (userChoice === "5") {
+        let userAnswer = readline.question("Please enter a number: ");
+        let userNumChoice = Number(userAnswer);
+         function randomNumber(){
+            let num = Math.round(Math.random() * userNumChoice);
+             console.log("Your random number is:", num);
+    }
 randomNumber(userNumChoice);
-
 //Custom Rounding tot he 2nd decimal place
-}else {
-    let userAnswer = readline.question("Please enter a number: ");
-    let userNumChoice = Number(userAnswer);
-
-function customRounding(userNumber) {
-    console.log(Math.round(userNumber*100)/100);
-}
-customRounding(userNumChoice);
-
-}
+    }else {
+        let userAnswer = readline.question("Please enter a number: ");
+        let userNumChoice = Number(userAnswer);
+         function customRounding(userNumber) {
+            console.log(Math.round(userNumber*100)/100);
+     }
+     customRounding(userNumChoice);
+    }
 }
